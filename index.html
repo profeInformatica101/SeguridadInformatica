@@ -1,10 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de la Seguridad Informática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Bases de la Seguridad Informática</h1>
+        <h2 class="mt-4">Índice</h2>
+        <ol>
+            <li><a href="#conceptos">Conceptos fundamentales</a></li>
+            <li><a href="#mecanismos">Mecanismos básicos de seguridad</a></li>
+            <li><a href="#vulnerabilidades">Vulnerabilidades de un sistema informático</a></li>
+            <li><a href="#amenazas">Amenazas</a></li>
+            <li><a href="#ciberataques">Ciberataques</a></li>
+            <li><a href="#activos-riesgos-controles">Activos, riesgos y controles</a></li>
+            <li><a href="#seguridad-fisica-logica">Seguridad física vs. lógica</a></li>
+            <li><a href="#seguridad-activa-pasiva">Seguridad activa vs. pasiva</a></li>
+            <li><a href="#recursos">Recursos educativos en línea</a></li>
+        </ol>
+        <hr>
+        <h2 id="conceptos">Conceptos fundamentales</h2>
+        <ul>
+            <li><strong>Confidencialidad:</strong> Garantiza que la <u>información</u> solo sea accesible para las personas autorizadas.</li>
+            <li><strong>Integridad:</strong> Asegura que la <u>información</u> no sea modificada o destruida de manera no autorizada.</li>
+            <li><strong>Disponibilidad:</strong> Asegura que la <u>información</u> esté accesible para los usuarios autorizados cuando lo necesiten.</li>
+        </ul>
+        <img src="https://media.licdn.com/dms/image/C4D12AQHOO5pzpMxxfA/article-cover_image-shrink_720_1280/0/1592481703505?e=2147483647&v=beta&t=NNSjcwuwAt5ySGXZMbJVMgHCWUlCIPVxVBI7iXimmIQ" alt="" width="400px" height="300px">
 
-<html>
-  <head><title>Seguridad Informática</title></head>
-  <body>
-    <h2>Ataques</h2>
-    <ul>
-      <li><a href="ataques/ransomware.html">Ransomware</a></li>
-    </ul>
-  </body>
+        <h2 id="mecanismos">Mecanismos básicos de seguridad</h2>
+        <h3>Autenticación</h3>
+        <p>La autenticación es el proceso de verificar la identidad de un usuario, dispositivo o sistema. La
+            autenticación garantiza que la entidad que intenta acceder a un recurso o realizar una acción en particular sea realmente quien dice ser.</p>
+        <ul>
+            <li><strong>Por lo que uno sabe:</strong> Una contraseña o PIN que solo el usuario conoce.</li>
+            <li><strong>Por lo que uno tiene:</strong> Un objeto físico como una tarjeta magnética o un token de seguridad.</li>
+            <li><strong>Por lo que uno es:</strong> Características biométricas como huellas digitales, reconocimiento facial o de voz.</li>
+        </ul>
+        <h3>No repudio</h3>
+<p>El no repudio es un mecanismo de seguridad que impide que una entidad niegue haber realizado una acción, como el envío o recepción de un mensaje o la realización de una transacción. El no repudio se logra a través de la utilización de firmas digitales, sellos de tiempo y otros métodos que garantizan la autenticidad y la integridad de las acciones realizadas.</p>
+<h2 id="vulnerabilidades">Vulnerabilidades de un sistema informático</h2>
+<ul>
+    <li><strong>Fallos de diseño:</strong> Problemas en la arquitectura o diseño del software o hardware.</li>
+    <li><strong>Fallos de implementación:</strong> Errores en la programación o configuración del sistema.</li>
+    <li><strong>Debilidades en las políticas de seguridad:</strong> Ausencia o falta de actualización de políticas de seguridad.</li>
+    <li><strong>Errores humanos:</strong> Acciones involuntarias o falta de conocimiento por parte de los usuarios que pueden comprometer la seguridad.</li>
+</ul>
+<h2 id="amenazas">Amenazas</h2>
+<ul>
+    <li><strong>Ataques externos:</strong> Provenientes de individuos o grupos fuera de la organización, como hackers o cibercriminales.</li>
+    <li><strong>Ataques internos:</strong> Provenientes de empleados o usuarios autorizados que actúan con intenciones maliciosas o negligentes.</li>
+<li><strong>Desastres naturales:</strong> Daños causados por eventos naturales como inundaciones, terremotos o tormentas eléctricas.</li>
+<li><strong>Software malicioso:</strong> Programas diseñados para infiltrarse y dañar sistemas informáticos, como virus, troyanos, gusanos y ransomware.</li>
+</ul>
+<h2 id="ciberataques">Ejemplos de ciberataques</h2>
+<ul>
+    <li><strong>Malware:</strong> Software malicioso diseñado para dañar o infiltrarse en un sistema. Incluye virus, gusanos, troyanos, spyware, adware y rootkits.</li>
+    <li><strong><a href="https://profeinformatica101.github.io/SeguridadInformatica/ataques/ransomware.html">Ransomware</a></strong> Programa malicioso que cifra los archivos de un usuario y pide un rescate para recuperarlos.</li>
+    <li><strong>Phishing:</strong> Técnica de ingeniería social que utiliza correos electrónicos, mensajes de texto y otros medios para engañar a los usuarios y obtener información confidencial, como contraseñas o números de tarjetas de crédito. Incluye spear phishing, whaling, clone phishing, vishing y smishing.</li>
+    <li><strong>Ataques de fuerza bruta:</strong> Método de prueba de contraseñas que implica probar todas las posibles combinaciones hasta encontrar la correcta. Puede llevar mucho tiempo pero puede ser efectivo en sistemas con contraseñas débiles.</li>
+    <li><strong>Ataque de diccionario:</strong> Método de prueba de contraseñas que utiliza una lista de palabras comunes para probar combinaciones de contraseña. Puede ser más rápido que la fuerza bruta si la contraseña es común.</li>
+    <li><strong>Ataques de denegación de servicio (DoS) y de denegación de servicio distribuido (DDoS):</strong> Intentos de inundar un servidor o red con tráfico falso para interrumpir el servicio. En un ataque DDoS, se utilizan múltiples dispositivos comprometidos para enviar el tráfico.</li>
+    <li><strong>Ataques de desbordamiento de búfer:</strong> Método para aprovechar una vulnerabilidad en un programa que no está diseñado para manejar una cantidad de datos mayor a la prevista. Puede permitir que un atacante ejecute código malicioso en un sistema.</li>
+    <li><strong>Inyección de código:</strong> Técnica para insertar código malicioso en un sitio web o aplicación para obtener acceso no autorizado o robar información. Incluye la inyección SQL, la inyección de código HTML o JavaScript y la inyección de código en lenguajes de programación como PHP o Python.</li>
+    <li><strong>Ataques de sesión:</strong> Intentos de tomar el control de una sesión de usuario activa en un sistema en línea. Incluye el secuestro de sesión, en el que un atacante asume el control de una sesión activa, y la fijación de sesión, en la que un atacante fuerza a un usuario a usar una sesión manipulada.</li>
+    <li><strong>Ataques de hombre en el medio (MitM):</strong> Técnica para interceptar la comunicación entre dos partes en línea para obtener información confidencial. Puede utilizarse en conexiones inalámbricas o en redes inseguras.</li>
+</ul>
+
+
+<h2 id="activos-riesgos-controles">Activos, riesgos y controles</h2>
+<img src="https://2.bp.blogspot.com/_sdv3yhG5CB4/SFkpVsFkfoI/AAAAAAAAAzU/qCLHLtIBaGA/s400/AGR.jpg">
+        <ul>
+            <li><strong>Activos:</strong> Elementos valiosos de una organización, como la información, el hardware, el
+                software y las personas.</li>
+            <li><strong>Riesgos:</strong> Posibles eventos o acciones que pueden causar daño a los activos o afectar la
+                operación de una organización.</li>
+            <li><strong>Controles:</strong> Medidas implementadas para proteger los activos, minimizar los riesgos y
+                garantizar la confidencialidad, integridad y disponibilidad de la información.</li>
+        </ul>
+
+        <h2 id="seguridad-fisica-logica">Seguridad física vs. lógica</h2>
+        <p>La seguridad informática se divide en dos categorías principales: seguridad física y seguridad lógica. La seguridad física se refiere a las medidas de protección física que se utilizan para proteger los recursos informáticos, como edificios, hardware y equipos. La seguridad lógica se refiere a las medidas de protección electrónica que se utilizan para proteger los recursos informáticos, como contraseñas, cortafuegos y encriptación.</p>            
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Seguridad física</th>
+                <th>Seguridad lógica</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Definición</td>
+                <td>Protección de los activos y recursos físicos de una organización</td>
+                <td>Protección de los datos, sistemas y redes de una organización</td>
+              </tr>
+              <tr>
+                <td>Ejemplos</td>
+                <td>Cerraduras, cámaras de seguridad, sistemas de alarma</td>
+                <td>Contraseñas, autenticación de usuarios, firewalls, cifrado de datos, VPN, control de acceso a recursos</td>
+              </tr>
+              <tr>
+                <td>Objetivo</td>
+                <td>Prevenir el acceso no autorizado a las instalaciones</td>
+                <td>Prevenir el acceso no autorizado a los sistemas y datos de una organización</td>
+              </tr>
+              <tr>
+                <td>Amenazas comunes</td>
+                <td>Robo, vandalismo, incendios, desastres naturales</td>
+                <td>Malware, ataques de phishing, hacking, ingeniería social, fugas de información</td>
+              </tr>
+              <tr>
+                <td>Impacto de la violación</td>
+                <td>Daños físicos a los activos, interrupción de servicios</td>
+                <td>Pérdida de datos sensibles, interrupción de servicios, daño a la reputación de la organización</td>
+              </tr>
+              <tr>
+                <td>Coste</td>
+                <td>Alto costo en sistemas de seguridad y personal de seguridad</td>
+                <td>Costo de implementación de sistemas de seguridad y personal de seguridad, costo de capacitación y educación de los empleados</td>
+              </tr>
+            </tbody>
+          </table>
+        <h2 id="seguridad-activa-pasiva">Seguridad activa vs. pasiva</h2>
+        <p>La seguridad activa y pasiva son dos enfoques diferentes para proteger los sistemas y datos de una organización. La seguridad activa implica la implementación de medidas proactivas para prevenir y detectar amenazas, mientras que la seguridad pasiva se enfoca en proteger y limitar el acceso a los activos de la organización.</p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Seguridad activa</th>
+                    <th>Seguridad pasiva</th>
+     
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Definición</td>
+                    <td>Medidas de seguridad proactivas que requieren intervención humana</td>
+                    <td>Medidas de seguridad reactivas que no requieren intervención humana</td>
+                  </tr>
+                  <tr>
+                    <td>Ejemplos</td>
+                    <td>Entrenamiento de usuarios, concienciación sobre ciberseguridad, pruebas de penetración, monitoreo de seguridad</td>
+                    <td>Actualizaciones de software, parches de seguridad, copias de seguridad, redundancia de hardware y software</td>
+                  </tr>
+                  <tr>
+                    <td>Objetivo</td>
+                    <td>Detectar y prevenir las amenazas antes de que ocurran</td>
+                    <td>Minimizar el impacto de las amenazas una vez que han ocurrido</td>
+                  </tr>
+                  <tr>
+                    <td>Amenazas comunes</td>
+                    <td>Ingeniería social, phishing, malware, hacking</td>
+                    <td>Desastres naturales, fallas de hardware, errores humanos</td>
+                  </tr>
+                  <tr>
+                    <td>Coste</td>
+                    <td>Minimizado gracias a las medidas proactivas tomadas</td>
+                    <td>Mayor tiempo de recuperación y pérdida de datos o servicios</td>
+                  </tr>
+                </tbody>
+              </table>
+        <h1 id="recursos">Consejos y recursos adicionales para la educación en ciberseguridad</h1>
+
+        <h2 class="mt-4">Ciberhigiene</h2>
+        <p>La ciberhigiene se refiere a las prácticas y hábitos que ayudan a mantener la seguridad de la información y
+            proteger los dispositivos y sistemas informáticos. Algunos consejos básicos de ciberhigiene incluyen:</p>
+        <ul>
+            <li>Crear contraseñas seguras y cambiarlas regularmente.</li>
+            <li>Actualizar el software y el sistema operativo.</li>
+            <li>Utilizar soluciones antivirus y mantenerlas actualizadas.</li>
+            <li>No compartir información confidencial a través de medios no seguros.</li>
+        </ul>
+
+        <h2>Redes sociales y privacidad</h2>
+        <p>Las redes sociales pueden presentar riesgos para la privacidad y la seguridad de la información. Para
+            protegerse en las redes sociales, es importante:</p>
+        <ul>
+            <li>Configurar la privacidad de la cuenta y limitar la cantidad de información personal compartida.</li>
+            <li>Evitar aceptar solicitudes de amistad de personas desconocidas.</li>
+            <li>Pensar dos veces antes de publicar información sensible.</li>
+            <li>Utilizar contraseñas únicas y seguras para cada plataforma de redes sociales.</li>
+        </ul>
+
+        <h2>Ciberbullying</h2>
+        <p>El ciberbullying es el acoso en línea que ocurre a través de plataformas digitales como redes sociales,
+            aplicaciones de mensajería y juegos en línea. Para abordar el ciberbullying, es esencial:</p>
+        <ul>
+            <li>Reconocer las señales de ciberbullying, como mensajes hirientes o amenazantes, y la exclusión en línea.
+            </li>
+            <li>Fomentar el respeto y la empatía en las interacciones en línea.</li>
+            <li>Denunciar el ciberbullying a la plataforma correspondiente y, si es necesario, a las autoridades.</li>
+            <li>Brindar apoyo emocional a las víctimas de ciberbullying.</li>
+        </ul>
+
+        <h2>Ingeniería social</h2>
+        <p>La ingeniería social es una técnica utilizada por los atacantes para manipular a las personas y obtener
+            información confidencial. Para protegerse de la ingeniería social, es importante:</p>
+        <ul>
+            <li>Verificar la identidad de las personas que solicitan información personal o confidencial.</li>
+            <li>Desconfiar de mensajes y llamadas inesperadas, incluso si parecen provenir de fuentes legítimas.</li>
+            <li>No compartir información confidencial a través de medios no seguros o sin verificar la identidad del
+                receptor.</li>
+            <li>Educar a los usuarios sobre las tácticas comunes de ingeniería social y cómo reconocerlas.</li>
+        </ul>
+
+        <h2>Navegación segura</h2>
+        <p>Adoptar hábitos de navegación segura puede ayudar a proteger la privacidad y la seguridad en línea. Algunas
+            prácticas recomendadas incluyen:</p>
+        <ul>
+            <li>Utilizar conexiones HTTPS siempre que sea posible.</li>
+            <li>Evitar el acceso a sitios web sospechosos o no seguros.</li>
+            <li>No descargar archivos de fuentes desconocidas o no confiables.</li>
+            <li>Utilizar una VPN (red privada virtual) para proteger la privacidad y el anonimato en línea.</li>
+            <li>Configurar y utilizar un navegador seguro, ajustando la configuración de privacidad y seguridad según
+                sea necesario.</li>
+        </ul>
+
+        <h2>Recursos educativos en línea</h2>
+        <p>Existen numerosos recursos en línea disponibles para aprender más sobre ciberseguridad y promover la
+            educación en seguridad informática. Algunos ejemplos incluyen:</p>
+        <ul>
+            <li>Plataformas de cursos en línea como Coursera, Udemy y edX, que ofrecen cursos de ciberseguridad y
+                seguridad informática.</li>
+            <li>Sitios web de organizaciones gubernamentales y no gubernamentales que ofrecen recursos y materiales
+                educativos sobre ciberseguridad, como el <a href="https://www.incibe.es/">INCIBE</a>, la <a href="https://www.osi.es/es">Oficina de Seguridad del Internauta</a>, y la <a href="https://www.ccn-cert.cni.es">CCN-CERT</a>.</li>
+            <li>Foros y comunidades en línea donde los profesionales de la ciberseguridad comparten conocimientos y
+                experiencias.</li>
+            <li>Eventos y conferencias de ciberseguridad, tanto presenciales como virtuales, donde se presentan las
+                últimas investigaciones y desarrollos en el campo.</li>
+        </ul>
+</div>
+</body>
 </html>
