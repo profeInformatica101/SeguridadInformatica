@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cifrado simétrico con CryptoJS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script>
+
+        /**
+
+Key e iv son parámetros utilizados en los algoritmos de cifrado simétrico como AES
+ para generar una clave de cifrado única y segura para cifrar y descifrar datos.
+
+    Key: es la clave de cifrado que se utiliza para cifrar y descifrar los datos. 
+    La clave debe ser única y secreta para garantizar la seguridad del cifrado.
+     La longitud de la clave varía dependiendo del algoritmo utilizado. 
+     En el ejemplo que mostré anteriormente, la clave se define como 0123456789abcdef0123456789abcdef,
+      que es una cadena hexadecimal de 32 caracteres.
+
+    IV (Initialization Vector): es un valor aleatorio que se utiliza como punto de partida para el cifrado.
+     El IV asegura que el mismo texto sin cifrar no se cifre de la misma manera cada vez que se utiliza 
+     el mismo algoritmo de cifrado y clave. La longitud del IV también varía según el algoritmo utilizado.
+      En el ejemplo que mostré anteriormente, el IV se define como abcdef9876543210abcdef9876543210, 
+      que es una cadena hexadecimal de 32 caracteres.
+      */
+    function encrypt() {
+            const key = CryptoJS.enc.Hex.parse("0123456789abcdef0123456789abcdef");
+            const iv = CryptoJS.enc.Hex.parse("abcdef9876543210abcdef9876543210");
+            const plaintext = document.getElementById("inputText").value;
+            const ciphertext = CryptoJS.AES.encrypt(plaintext, key, {iv: iv}).toString();
+            document.getElementById("outputText").value = ciphertext;
+        }
+        
+        function decrypt() {
+            const key = CryptoJS.enc.Hex.parse("0123456789abcdef0123456789abcdef");
+            const iv = CryptoJS.enc.Hex.parse("abcdef9876543210abcdef9876543210");
+            const ciphertext = document.getElementById("outputText").value;
+            const decrypted = CryptoJS.AES.decrypt(ciphertext, key, {iv: iv}).toString(CryptoJS.enc.Utf8);
+            document.getElementById("decryptedText").value = decrypted;
+        }
+    </script>
+</head>
+<body>
+    <h1>Cifrado simétrico con CryptoJS</h1>
+    <label for="inputText">Texto a cifrar:</label>
+    <textarea id="inputText" rows="4" cols="50"></textarea><br><br>
+    <button onclick="encrypt()">Cifrar</button><br><br>
+    <label for="outputText">Texto cifrado:</label>
+    <textarea id="outputText" rows="4" cols="50" readonly></textarea><br><br>
+    <button onclick="decrypt()">Descifrar</button><br><br>
+    <label for="decryptedText">Texto descifrado:</label>
+    <textarea id="decryptedText" rows="4" cols="50" readonly></textarea>
+</body> 
+</html>
