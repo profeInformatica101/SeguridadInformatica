@@ -32,8 +32,32 @@
     <script>
         function mostrarInformacion() {
             document.getElementById('info').style.display = 'block';
+            <?php guardarInformacion(); ?>
         }
     </script>
 
 </body>
 </html>
+
+<?php
+function guardarInformacion() {
+    $filename = "info_host.json";
+
+    $data = [
+        'direccion_ip' => $_SERVER['REMOTE_ADDR'],
+        'navegador_web' => $_SERVER['HTTP_USER_AGENT'],
+        'servidor' => $_SERVER['SERVER_SOFTWARE'],
+        'hora' => date('Y-m-d H:i:s'),
+    ];
+
+    if (file_exists($filename)) {
+        $jsonData = json_decode(file_get_contents($filename), true);
+        $jsonData[] = $data;
+    } else {
+        $jsonData = [$data];
+    }
+
+    file_put_contents($filename, json_encode($jsonData, JSON_PRETTY_PRINT));
+}
+?>
+
