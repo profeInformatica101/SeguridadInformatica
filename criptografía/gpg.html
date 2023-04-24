@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prácticas GPG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 960px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Prácticas GPG: Criptografía Simétrica y Asimétrica</h1>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#simetrica">Criptografía Simétrica</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#asimetrica">Criptografía Asimétrica</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane container active" id="simetrica">
+            <h2 class="mt-3">Criptografía Simétrica</h2>
+            <ol>
+                <li>Cifrar un archivo utilizando cifrado simétrico: <code>gpg --symmetric input.txt</code></li>
+                <li>Descifrar un archivo utilizando cifrado simétrico: <code>gpg --decrypt input.txt.gpg > output.txt</code></li>
+                <li>Cifrar un archivo utilizando cifrado simétrico y una contraseña específica: <code>gpg --symmetric --cipher-algo AES256 --passphrase "mi_contraseña" input.txt</code></li>
+                <li>Descifrar un archivo utilizando cifrado simétrico y una contraseña específica: <code>gpg --decrypt --passphrase "mi_contraseña" input.txt.gpg > output.txt</code></li>
+            </ol>
+        </div>
+        <div class="tab-pane container fade" id="asimetrica">
+            <h2 class="mt-3">Criptografía Asimétrica</h2>
+            <ol>
+                <li>Generar un par de claves: <code>gpg --full-generate-key</code></li>
+                <li>Listar claves públicas: <code>gpg --list-keys</code></li>
+                <li>Exportar clave pública: <code>gpg --armor --export 0x12345678 > public_key.asc</code></li>
+                <li>Importar clave pública: <code>gpg --import public_key.asc</code></li>
+                <li>Cifrar un archivo para un destinatario: <code>gpg --encrypt --recipient 0x12345678 input.txt</code></li>
+                <li>Descifrar un archivo cifrado: <code>gpg --decrypt input.txt.gpg > output.txt</code></li>
+                <li>Firmar un archivo en claro: <code>gpg --clearsign -u 0x12345678 input.txt</code></li>
+                <li>Verificar la firma de un archivo en claro firmado: <code>gpg --verify input.txt.asc</code></li>
+                <li>Cifrar y firmar un archivo en un solo paso: <code>gpg --encrypt --sign -u 0x12345678 --recipient 0x12345678 input.txt</code></li>
+                <li>Descifrar y verificar la firma de un archivo cifrado y firmado: <code>gpg --decrypt input.txt.gpg > output.txt</code></li>
+                <li>Crear un archivo de configuración para personalizar la generación de claves</li>
+                <li>Exportar una clave privada a un archivo: <code>gpg --armor --export-secret-keys 0x12345678 > private_key.asc</code></li>
+                <li>Importar una clave privada desde un archivo: <code>gpg --import private_key.asc</code></li>
+                <li>Eliminar una clave pública de tu llavero GPG: <code>gpg --delete-key 0x12345678</code></li>
+                <li>Eliminar una clave privada de tu llavero GPG: <code>gpg --delete-secret-key 0x12345678</code></li>
+                </ol>
+                </div>
+                </div>
+                
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        $('.nav-tabs a').click(function() {
+                            $(this).tab('show');
+                        });
+                    });
+                </script>
+                </body>
+                </html>

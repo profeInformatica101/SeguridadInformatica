@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteganografía</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Esteganografía</h1>
+        <p>La esteganografía es la técnica que permite ocultar mensajes dentro de otros, de tal manera que a simple vista no se aprecia el mensaje oculto, sino solo el mensaje contenedor. Efectivamente, aplicando una serie de fórmulas matemáticas se consigue camuflar información a plena vista. El contenedor puede ser un texto, una imagen, un archivo de audio, etc.</p>
+        <p>Existen multitud de herramientas que, mediante esteganografía, permiten ocultar archivos dentro de otros. Las hay de pago, pero también encontrarás software libre que te permita conseguirlo.</p>
+        <ol>
+            <li>Crea en tu carpeta personal una carpeta llamada “ESTEGANOGRAFIA”.</li>
+            <li>Consigue alguna imagen jpg (puedes buscar en internet y descargar alguna),cambia su nombre a "imagen.jpg" y guárdala en la misma carpeta que creaste en el punto anterior.</li>
+            <li>Abre el editor de textos y crea un documento de texto llamado mensaje.txt, escribe en su interior algunas frases. A continuación guarda el documento en la carpeta ../ESTEGANOGRAFIA/contenedor</li>
+            <li>Comprime la carpeta contenedor.</li>
+            <li>Abre un Terminal y asegurate de estar en la carpeta ESTENOGRAFIA con el comando pwd.</li>
+            <li>Ejecuta el comando siguiente: <code>$ cat imagen.jpg contenedor.zip > destino.jpg</code></li>
+            <li>Ahora tendrás un archivo llamado destino.jpg. Elimina todos los archivos que hay en la carpeta excepto el destino.jpg.</li>
+            <li>Puedes cerrar el terminal.</li>
+            <li>Abre la carpeta donde está el archivo destino.jpg y haz un doble clic en el mismo (se abrirá la imagen inicial).</li>
+            <li>Cierra la imagen.</li>
+            <li>Ahora cambia el nombre del archivo destino.jpg y llámale destino.zip.</li>
+            <li>Seguidamente, haz clic con el botón derecho del ratón sobre él y selecciona “Extraer”. Aparecerán en la carpeta los archivos correspondientes a la imagen y al documento, éste último con la información original intacta.</li>
+        </ol>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VKgpNv1XBtc?start=271" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    </div>
+</body>
+</html>
