@@ -1,0 +1,41 @@
+nmap 192.168.1.61
+Este comando ejecuta una exploración de puertos en el dispositivo con la dirección IP 192.168.1.61 utilizando el programa nmap. El resultado muestra los puertos abiertos y los servicios que se están ejecutando en el dispositivo.
+
+lsof -i
+Este comando muestra una lista de todos los archivos abiertos en el sistema que utilizan Internet. El resultado incluye información sobre los procesos que están utilizando los archivos, los puertos y los protocolos utilizados.
+
+ss -atunp
+Este comando muestra todas las conexiones de red activas en el sistema, incluyendo conexiones TCP y UDP. El resultado incluye información sobre los puertos locales y remotos, así como los procesos que están utilizando las conexiones.
+
+netstat -putona
+Este comando muestra todas las conexiones de red activas en el sistema, incluyendo conexiones TCP y UDP. El resultado incluye información sobre los puertos locales y remotos, así como los procesos que están utilizando las conexiones. Además, muestra el usuario que inició el proceso y la cantidad de datos transmitido
+
+ps -aux
+muestra todos los procesos en ejecución junto con información detallada sobre cada uno.
+    
+top
+muestra una lista actualizada en tiempo real de los procesos que consumen más recursos del sistema.
+   
+ifconfig
+muestra información detallada sobre la configuración de red del sistema.
+
+ping
+verifica la conectividad de red a un host remoto.
+
+traceroute
+muestra la ruta que los paquetes toman desde el host local hasta un host remoto.
+ 
+grep
+busca un patrón específico en un archivo o en la salida de otro comando.
+
+find
+busca archivos y directorios que coincidan con un patrón específico.
+    
+ chmod
+ cambia los permisos de acceso a archivos y directorios.
+   
+ chown
+ cambia el propietario y el grupo de archivos y directorios.
+  
+  tar
+  crea y extrae archivos comprimidos en formato tar.
